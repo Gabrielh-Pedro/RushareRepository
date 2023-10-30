@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rushare</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="image/logotipo.png" type="image/logotipo.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+        </div>
+
+    </header>
+
+    <main>
+      </button>
+        <div class="flatImage">
+            <div class="person">
+            </div>
+            <div class="mic">
+            </div>
+            <div class="cpu">
+            </div>
+            <div class="headset">
+            </div>
+            <div class="board">
+            </div>
+            <div class="operator">
+            </div>
+            <div class="mouse">
+            </div>
+        </div>
+        <div class="registration-form">
+            <h2 class="title1">Seja bem-vindo(a)!</h2>
+            <h3 class="title2">Vamos dar play?</h3>            
+            <form id="register-form">
+                <form id="register-form">
+                    <input type="text" id="username" placeholder="Usuário" required oninput="validateUsername()">
+                    <span class="error-message" id="username-error"></span>
+                    
+                    <!-- Senha -->
+                    <input type="password" id="password" placeholder="Senha" required oninput="validatePassword()">
+                    <span class="error-message" id="password-error"></span>
+                    
+                    <div class="icon-container">
+                      <img
+                        src="image/eye.png"
+                        alt="Mostrar Senha"
+                        id="showPasswordButton"
+                        class="colorful-icon toggle-password-button">
+                    </div>                      
+                    <!-- Texto e botão agora estão dentro de um contêiner -->
+                    <div class="text-and-button">
+                        <button id="register-button" type="button" onclick="submitForm()">Play</button>
+                        <a id="botao-login" href="login.html">Ainda não sou um Rusher</a>
+                </form>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const caixaTermos = document.getElementById("concordo-com-termos");
+          const textoTermos = document.getElementById("texto-termos");
+      
+          caixaTermos.addEventListener("change", function () {
+            if (caixaTermos.checked) {
+              textoTermos.style.color = "#3DBB33"; // Cor padrão quando aceito
+            } else {
+              textoTermos.style.color = "#5b5b6d"; // Cor mais escura quando não aceito
+            }
+          });
+        });
+      </script>
+      
+</body>
+</html>

@@ -1,0 +1,507 @@
+@font-face {
+  font-family: "Mont";
+  src: url('image/fonts/Montserrat-Regular.ttf') format('truetype'); /* Alterado 'ttf' para 'truetype' */
+}
+
+@font-face {
+  font-family: "Mont-Medium";
+  src: url('image/fonts/Montserrat-Medium.ttf') format('truetype'); /* Alterado 'ttf' para 'truetype' */
+}
+
+@font-face {
+  font-family: "Mont-Bold";
+  src: url('image/fonts/Montserrat-Bold.ttf') format('truetype'); /* Alterado 'ttf' para 'truetype' */
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #090a08; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4acc31; /* Cor do thumb (cabo) */
+  border-radius: 5px; /* Raio do thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #3DBB33; /* Cor do thumb ao passar o mouse */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121215;
+}
+
+header {
+  color: #fff;
+  height: 95px;
+  position: relative; /* Adicione position: relative; para ser uma referência para os elementos filhos posicionados */
+}
+
+main {
+  position: relative;
+  height: 1000px;
+}
+
+.logo {
+  position: absolute;
+  width: 12vw;
+  height: 12vh;
+  background-image: url("image/logotipo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 3%;
+  margin-left: 10%; /* Espaço entre o formulário e o "flatdesign" */
+}
+
+.flatImage {
+  position: absolute;
+  height: 60vh;
+  width: 50vw;
+  left: 0;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.person {
+  position: absolute;
+  overflow: hidden;
+  width: 55vw;
+  height: 55vh;
+  background-image: url("image/flat/person.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  z-index: -1;
+  animation: floatImage 8s ease-in-out infinite;
+}
+
+.mic {
+  position: absolute;
+  overflow: hidden;
+  width: 18vw;
+  height: 18vh;
+  background-image: url("image/flat/mic.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  bottom: 5%;
+  right: 0px;
+  animation: floatImage2 8s ease-in-out infinite;
+}
+
+.headset {
+  position: absolute;
+  overflow: hidden;
+  width: 14vw;
+  height: 14vh;
+  background-image: url("image/flat/headset.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  top: 0px;
+  right: 0px;
+  animation: floatImage3 8s ease-in-out infinite;
+}
+
+.mouse {
+  position: absolute;
+  overflow: hidden;
+  width: 5vw;
+  height: 5vh;
+  background-image: url("image/flat/mouse.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  top: 8vh;
+  left: 18vw;
+  animation: floatImage4 8s ease-in-out infinite;
+}
+
+.board {
+  position: absolute;
+  overflow: hidden;
+  width: 11vw;
+  height: 11vh;
+  background-image: url("image/flat/board.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  top: 10vh;
+  left: 8vw;
+  animation: floatImage5 8s ease-in-out infinite;
+}
+
+.operator {
+  position: absolute;
+  overflow: hidden;
+  width: 17vw;
+  height: 17vh;
+  background-image: url("image/flat/operator.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  top: 22vh;
+  left: 3vw;
+  animation: floatImage6 8s ease-in-out infinite;
+}
+
+.cpu {
+  position: absolute;
+  overflow: hidden;
+  width: 14vw;
+  height: 14vh;
+  background-image: url("image/flat/cpu.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  bottom: 5vh;
+  left: 6vw;
+  animation: floatImage7 8s ease-in-out infinite;
+}
+
+@keyframes floatImage2 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, -5px); /* Flutuar para a esquerda e para cima */
+  }
+  50% {
+    transform: translate(5px, 5px); /* Flutuar para a direita e para baixo */
+  }
+  75% {
+    transform: translate(-5px, -5px); /* Flutuar para a esquerda e para cima */
+  }
+}
+
+@keyframes floatImage3 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, -5px); /* Flutuar para a direita e para cima */
+  }
+  50% {
+    transform: translate(-5px, 5px); /* Flutuar para a esquerda e para baixo */
+  }
+  75% {
+    transform: translate(5px, -5px); /* Flutuar para a direita e para cima */
+  }
+}
+
+@keyframes floatImage4 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, -5px); /* Flutuar para a direita e para cima */
+  }
+  50% {
+    transform: translate(5px, 5px); /* Flutuar para a direita e para baixo */
+  }
+  75% {
+    transform: translate(-5px, 5px); /* Flutuar para a esquerda e para baixo */
+  }
+}
+
+@keyframes floatImage5 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, -5px); /* Flutuar para a esquerda e para cima */
+  }
+  50% {
+    transform: translate(-5px, 5px); /* Flutuar para a esquerda e para baixo */
+  }
+  75% {
+    transform: translate(5px, -5px); /* Flutuar para a direita e para cima */
+  }
+}
+
+@keyframes floatImage6 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, 0); /* Flutuar para a direita */
+  }
+  50% {
+    transform: translate(-5px, 0); /* Flutuar para a esquerda */
+  }
+  75% {
+    transform: translate(5px, 0); /* Flutuar para a direita */
+  }
+}
+
+@keyframes floatImage7 {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 5px); /* Flutuar para baixo */
+  }
+  50% {
+    transform: translate(0, -5px); /* Flutuar para cima */
+  }
+  75% {
+    transform: translate(0, 5px); /* Flutuar para baixo */
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, 5px); /* Flutuar para a direita e para baixo */
+  }
+  50% {
+    transform: translate(-5px, -5px); /* Flutuar para a esquerda e para cima */
+  }
+  75% {
+    transform: translate(5px, -5px); /* Flutuar para a direita e para cima */
+  }
+}
+
+/* Estilos para o formulário e caixas de texto */
+.registration-form {
+  float: right; /* Flutua o formulário à direita */
+  width: 26vw; /* Largura do formulário */
+  margin-right: 10%; /* Espaço entre o formulário e o "flatdesign" */
+  margin-top: 2%;
+  font-family: "Mont-Medium";
+  text-align: left;
+  color: #30303a;
+  font-size: 1vw;
+}
+
+.title1 {
+  font-size: 5vh; /* Tamanho de fonte maior para "Olá Rusher!" */
+  font-family: "Mont-Bold"; /* Definir uma fonte diferente, se necessário */
+  color: white; /* Cor do texto, se desejado */
+  margin-bottom: -7%;
+}
+
+.title2 {
+  font-size: 4vh; /* Tamanho de fonte maior para "Olá Rusher!" */
+  font-family: "Mont"; /* Definir uma fonte diferente, se necessário */
+  color: #4acc31; /* Cor do texto, se desejado */
+}
+
+
+/* Estilos para as caixas de texto */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  position: relative;
+  width: 95%;
+  border: none;
+  border-bottom: 2px solid #30303a;
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #121215;
+  color: white; /* Define a cor do texto nas caixas de texto */
+  font-family: "Mont";
+  font-size: 0.9vw;
+  margin: 2% 0%;
+}
+
+/* Adicione o estilo para o placeholder */
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder {
+  color: #30303a; /* Cor do texto do placeholder */
+  font-family: "Mont-Medium";
+  font-size: 1w;
+}
+
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover {
+  transform: scale(1.05);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-bottom: 2px solid #3DBB33; /* Altere a cor da borda inferior no foco */
+}
+
+input[type="text"]:valid,
+input[type="password"]:valid,
+input[type="email"]:valid {
+  border-bottom: 2px sol
+  id #3DBB33; /* Cor da borda verde para campos válidos */
+}
+
+input[type="password"].valid {
+  border-bottom: 2px solid #3DBB33; /* Cor da borda verde para campos válidos */
+}
+
+input[type="text"].invalid,
+input[type="password"].invalid {
+  border-bottom: 2px solid #FF0000; /* Cor da borda vermelha para campos inválidos */
+}
+
+/* Estilos para a caixa de seleção personalizada */
+.checkbox-container {
+  position: absolute;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 1vw; /* Largura da caixa de seleção */
+  height: 1vh; /* Altura da caixa de seleção */
+  background-color: #30303a; /* Cor de fundo da caixa de seleção não marcada */
+  border: 2px solid #30303a; /* Cor da borda da caixa de seleção */
+  border-radius: 50px; /* Cantos arredondados para criar um retângulo arredondado */
+  transition: background 0.3s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+  background-color: #3DBB33; /* Cor de fundo da caixa de seleção marcada */
+  animation: spin 2s linear infinite; /* Animação de rotação para a bolinha */
+  border: 2px solid #3DBB33; /* Cor da borda da caixa de seleção */
+}
+
+#texto-termos {
+  display: flex;
+  color:#30303a;
+  margin-left: 4vh; /* Espaçamento à esquerda para separar o texto da caixa de seleção */
+  margin-top: -4px;  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.text-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+.text-and-button button {
+  width: 26vw; /* Largura igual às caixas de texto */
+  padding: 10px; /* Espaçamento interno para melhor aparência */
+  border: none;
+  border-radius: 50px; /* Cantos arredondados */
+  background-color: #4acc31;
+  color: #121215;
+  cursor: pointer;
+  font-family: "Mont-Bold";
+  transition: transform 0.2s; /* Adiciona uma transição suave de 0.2 segundos */
+}
+
+.text-and-button button:hover {
+  background-color: #3DBB33;
+  transform: scale(1.1); /* Aumenta o tamanho em 10% no hover */
+}
+
+/* Estilos para o botão "Registrar" */
+#register-button {
+  position: absolute;
+  width: 26vw;
+  height: 5vh;
+  margin-top: 3vh;
+  margin-left: 1%;
+  background-color: #4acc31; /* Cor de fundo do botão */
+  color: #121215; /* Cor do texto do botão */
+  border: none;
+  font-size: 1vw;
+  border-radius: 50px; /* Cantos arredondados */
+  cursor: pointer;
+  line-height: 1vh; 
+}
+
+/* Altera a cor do botão quando hover */
+#register-button:hover {
+  background-color: #3DBB33;
+}
+
+#botao-login {
+  color: #30303a;
+  text-decoration: underline;
+  margin-top: 11vh;
+}
+
+.password-container {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Coloca o botão à direita */
+  width: 100%; /* Ocupa a largura disponível */
+}
+
+/* Estilos para o botão "Mostrar Senha" */
+.password-container button {
+  margin-left: 10px; /* Adiciona um espaço entre a caixa de senha e o botão */
+}
+
+/* Estilo para a imagem do ícone "Mostrar Senha" */
+#showPasswordButton {
+  width: 2vw;
+  height: 2.7vh;
+  position: relative; /* Mantenha a posição relativa para facilitar o posicionamento */
+  float: right; /* Alinha o ícone à direita */
+  margin-top: -10px; /* Ajuste conforme necessário para alinhar verticalmente com a caixa de senha */
+  z-index: 5;
+  opacity: 0.3;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+#showPasswordButton:hover {
+  transform: scale(1.1); /* Aumenta o tamanho em 10% no hover */
+  opacity: 1;
+}
+
+/* Estilo para o contêiner do ícone */
+.icon-container {
+  position: relative;
+  float: right;
+  margin-top: -35px;
+}
+
+/* Estilo para a imagem do ícone "Mostrar Senha" com cor por padrão */
+.colorful-icon {
+  filter: hue-rotate(0deg); /* Define a cor por padrão (vermelho) */
+  cursor: pointer;
+  transition: filter 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Quando o mouse passa sobre a imagem, a cor muda */
+.colorful-icon:hover {
+  filter: hue-rotate(120deg); /* Altera a cor para verde (ajuste conforme necessário) */
+}
+
+.toggle-password-button {
+  cursor: pointer;
+  position: relative; /* Mantenha a posição relativa para facilitar o posicionamento */
+  float: right; /* Alinha o ícone à direita */
+  top: 5px; /* Ajuste conforme necessário para alinhar verticalmente com a caixa de senha */
+  right: -5px;
+  z-index: 5;
+  display: none; /* Inicialmente, o ícone do olho está oculto */
+  transition: filter 0.3s, color 0.3s; /* Adiciona uma transição suave de cor e filtro */
+}
+
+.toggle-password-button:hover {
+  filter: hue-rotate(120deg); /* Altera a cor para verde (ajuste conforme necessário) */
+  color: #3DBB33; /* Cor no hover */
+}
